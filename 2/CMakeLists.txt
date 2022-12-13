@@ -4,9 +4,9 @@ project(AocDayOne)
 add_library(RPS lib/RPS.cpp lib/RPS.h)
 
 add_executable(PartOne src/PartOne.cpp)
-#add_executable(PartTwo src/part_two.cpp)
+add_executable(PartTwo src/PartTwo.cpp)
 
 include_directories(${CMAKE_SOURCE_DIR}/lib)
 
 target_link_libraries(PartOne RPS)
-#target_link_libraries(PartTwo ParseData)
+target_link_libraries(PartTwo RPS)

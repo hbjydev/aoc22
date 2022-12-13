@@ -35,4 +35,36 @@ namespace rps {
 
     return make_tuple(themScore, youScore);
   }
+
+  char Parser::whatNow(char play, char need) {
+    int playVal = Parser::value(play);
+
+    if (need == Draw) {
+      return play;
+    } else if (need == Lose) {
+      switch (playVal) {
+        case Rock:
+          return YScissors;
+
+        case Paper:
+          return YRock;
+
+        case Scissors:
+          return YPaper;
+      }
+    } else { // assume we need to win
+      switch (playVal) {
+        case Rock:
+          return YPaper;
+
+        case Paper:
+          return YScissors;
+
+        case Scissors:
+          return YRock;
+      }
+    }
+
+    return ' ';
+  }
 }

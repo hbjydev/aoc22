@@ -10,14 +10,19 @@ namespace rps {
   static const char YPaper = 'Y';
   static const char YScissors = 'Z';
 
-  static const int Rock = 1;
-  static const int Paper = 2;
+  static const int Rock     = 1;
+  static const int Paper    = 2;
   static const int Scissors = 3;
+
+  static const char Lose = 'X';
+  static const char Draw = 'Y';
+  static const char Win  = 'Z';
 
   class Parser
   {
   public:
-    static tuple<int, int> score(char them, char you);
     static int value(char in);
+    static char whatNow(char play, char need);
+    static tuple<int, int> score(char them, char you);
   };
 };
