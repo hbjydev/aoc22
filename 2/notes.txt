@@ -1,0 +1,10 @@
+# Enums
+
+## StrategyInstruction
+
+- `A` - Them, Rock
+- `B` - Them, Paper
+- `C` - Them, Scissors
+- `X` - You, Rock
+- `Y` - You, Paper
+- `Z` - You, Scissors
